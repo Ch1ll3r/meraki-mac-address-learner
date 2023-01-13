@@ -102,7 +102,7 @@ if __name__ == "__main__":
                     datefmt='%m-%d %H:%M',
                     stream=sys.stdout)
     log_formatter = log.Formatter("%(asctime)s [%(threadName)-12.12s] [%(levelname)-5.5s]  %(message)s")
-    log_handler = TimedRotatingFileHandler(filename='mac-address-learner.log', when='midnight', interval=1,
+    log_handler = TimedRotatingFileHandler(filename='meraki-mac-address-learner.log', when='midnight', interval=1,
                                            backupCount=0)
     log_handler.setFormatter(log_formatter)
     log.getLogger().addHandler(log_handler)
